@@ -6,3 +6,8 @@
 .idea
 *.RData
 *.Rhistory
+packrat/lib*/
+packrat/src/
+*.Rprofile
+*.opts
+*.R
