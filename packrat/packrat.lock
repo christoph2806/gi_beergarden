@@ -1,0 +1,36 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.9.2
+RVersion: 3.4.4
+Repos: CRAN=https://cloud.r-project.org
+
+Package: BH
+Source: CRAN
+Version: 1.66.0-1
+Hash: 4cc8883584b955ed01f38f68bc03af6d
+
+Package: RApiDatetime
+Source: CRAN
+Version: 0.0.3
+Hash: daae673f6da0bccb6dea39e1b573fc8a
+
+Package: Rcpp
+Source: CRAN
+Version: 0.12.16
+Hash: 8cc9dc88c11acdcf8a6dec4a0f1500bc
+
+Package: anytime
+Source: CRAN
+Version: 0.3.0
+Hash: 0bbaa99585bf0a2bb8b1aa6d3a59ca27
+Requires: BH, RApiDatetime, Rcpp
+
+Package: packrat
+Source: CRAN
+Version: 0.4.9-2
+Hash: 47dbd4e04dcd01da02a2021203205cb1
+
+Package: plyr
+Source: CRAN
+Version: 1.8.4
+Hash: 2d09eea8a6bcac8e61b6a8728917b877
+Requires: Rcpp

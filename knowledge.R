@@ -47,7 +47,7 @@ eventThreshold <- 0 # 0 in case of using threshold proposal, otherwise Threshold
 wdays <- as.POSIXlt(beergarden$date)$wday
 months <- as.POSIXlt(beergarden$date)$mon
 
-calcPremium <- function(hoursOfDay, daysOfWeek, monthsOfYear, insuredSum, eventThreshold, minRain, verbose = TRUE) {
+calcPremium <- function(hoursOfDay, daysOfWeek, monthsOfYear, insuredSum, eventThreshold, minRain, verbose = FALSE) {
   selectedDays <- beergarden[wdays %in% daysOfWeek & months %in% monthsOfYear, ]
   presel <- data.frame(cbind(year=getYear(selectedDays[, 1]), maxRain = apply(selectedDays[,hoursOfDay], 1, minMax, na.rm=TRUE)))
   eventsPerYear <- count(presel[presel$maxRain >= minRain & presel$maxRain <= maxRain ,], "year")
