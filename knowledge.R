@@ -112,5 +112,5 @@ run <- function(p.insuredSum, p.minRain, p.eventThreshold) {
     minRain = as.numeric(p.minRain), 
     eventThreshold = as.numeric(p.eventThreshold)
     )
-  return (round(result*10,0)) # round it to zero decimals
+  return (round(result*100,0)) # round it to zero decimals
 }
