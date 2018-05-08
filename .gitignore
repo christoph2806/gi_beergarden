@@ -1,0 +1,8 @@
+.RData
+.Rhistory
+.Rproj.user
+.rstudio*
+*.Rproj
+.idea
+*.RData
+*.Rhistory
