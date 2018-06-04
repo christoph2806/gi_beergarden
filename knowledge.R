@@ -108,7 +108,7 @@ run <- function(p.insuredSum, p.minRain, p.eventThreshold) {
     hoursOfDay = hours, 
     daysOfWeek = daysOfWeek, 
     monthsOfYear = monthsOfYear, 
-    insuredSum = as.numeric(p.insuredSum), 
+    insuredSum = as.numeric(p.insuredSum) / 100,
     minRain = as.numeric(p.minRain), 
     eventThreshold = as.numeric(p.eventThreshold)
     )
