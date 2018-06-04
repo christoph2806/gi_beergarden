@@ -102,15 +102,15 @@ calcPremium <- function(hoursOfDay, daysOfWeek, monthsOfYear, insuredSum, eventT
 #* @param minRain:numeric Rain Threshold
 #* @param eventThreshold:numeric Number of days threshold
 #* @get /run
-run <- function(p.insuredSum, p.minRain, p.eventThreshold) {
-  cat("API Call incoming, params: insuredSum=", p.insuredSum, "; minRain=", p.minRain, "; eventThreshold=", p.eventThreshold, "\n")
+run <- function(insuredSum, minRain, eventThreshold) {
+  cat("API Call incoming, params: insuredSum=", insuredSum, "; minRain=", minRain, "; eventThreshold=", eventThreshold, "\n")
   result <- calcPremium(
     hoursOfDay = hours, 
     daysOfWeek = daysOfWeek, 
     monthsOfYear = monthsOfYear, 
-    insuredSum = as.numeric(p.insuredSum) / 100,
-    minRain = as.numeric(p.minRain), 
-    eventThreshold = as.numeric(p.eventThreshold)
+    insuredSum = as.numeric(insuredSum) / 100,
+    minRain = as.numeric(minRain) / 100,
+    eventThreshold = as.numeric(eventThreshold)
     )
   return (round(result*100,0)) # round it to zero decimals
 }
