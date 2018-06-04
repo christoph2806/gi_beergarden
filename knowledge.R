@@ -98,9 +98,9 @@ calcPremium <- function(hoursOfDay, daysOfWeek, monthsOfYear, insuredSum, eventT
 
   return (grossPremiumTaxed  )
 }
-#* @param p.insuredSum:numeric The insured sum
-#* @param p.minRain:numeric Rain Threshold
-#* @param p.eventThreshold:numeric Number of days threshold
+#* @param insuredSum:numeric The insured sum
+#* @param minRain:numeric Rain Threshold
+#* @param eventThreshold:numeric Number of days threshold
 #* @get /run
 run <- function(p.insuredSum, p.minRain, p.eventThreshold) {
   cat("API Call incoming, params: insuredSum=", p.insuredSum, "; minRain=", p.minRain, "; eventThreshold=", p.eventThreshold, "\n")
